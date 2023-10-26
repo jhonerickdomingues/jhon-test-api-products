@@ -13,8 +13,6 @@ COPY . .
 
 RUN npm run build --unsafe-perm
 RUN cp .env.example ./build/.env
-RUN cd build
-RUN npm install --unsafe-perm
 
 EXPOSE 3333
-ENTRYPOINT ["node", "server.js"]
+ENTRYPOINT ["node", "./build/server.js"]

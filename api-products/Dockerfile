@@ -12,7 +12,7 @@ COPY . .
 # RUN cp .env.prod .env
 
 RUN npm run build --unsafe-perm
-RUN cp .env ./build/.env
+RUN cp .env.example ./build/.env
 RUN cd build
 
 EXPOSE 3333

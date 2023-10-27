@@ -19,12 +19,9 @@
 */
 
 import Route from "@ioc:Adonis/Core/Route";
-import Product from "../app/Models/Product";
 
 Route.get("/", async () => {
   return { hello: "world" };
 });
 
-Route.get("/products", async () => {
-  return Product.query().preload("imagens");
-});
+Route.get("/products", "ProductsController.index");

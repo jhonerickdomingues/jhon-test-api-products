@@ -11,7 +11,7 @@ export default class extends BaseSchema {
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
       table.string("nome", 255).notNullable();
-      table.string("descricao", 255).notNullable();
+      table.text("descricao").notNullable();
       table.string("categoria", 255).notNullable();
       table.integer("preco_original").notNullable();
       table.integer("preco_promocional").notNullable();

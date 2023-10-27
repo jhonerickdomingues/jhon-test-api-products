@@ -20,7 +20,7 @@ const corsConfig: CorsConfig = {
     "last-modified",
     "pragma",
   ],
-  credentials: true,
+  credentials: false,
   maxAge: 90,
 };
 

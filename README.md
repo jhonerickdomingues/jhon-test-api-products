@@ -16,10 +16,17 @@ Instale as dependencias
   npm install
 ```
 
-Crie um arquivo chamado ".env" com conteudo de ".env.example" e altere se quiser:
+Crie um arquivo chamado ".env" com conteudo de ".env.example" e coloque suas configurações do MariaDB:
 
 ```bash
   cp .env.example .env
+```
+
+Após configurar o ".env" com suas variaveis, rode as migrations e o seed
+
+```bash
+  npm run run:migrations
+  npm run run:seed
 ```
 
 Rode o projeto
